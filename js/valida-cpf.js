@@ -5,9 +5,7 @@ export default function isCpf(campo) {
         validateFirstDigit(cpf) ||
         validateSecondDigit(cpf)
     ) {
-        console.log('esse cpf não existe');
-    } else {
-        console.log('exeste');
+        campo.setCustomValidity('Esse CPF não é válido');
     }
 }
 

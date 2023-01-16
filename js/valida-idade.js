@@ -1,8 +1,8 @@
 export default function isOfAge(campo) {
     const dataNascimento = new Date(campo.value);
-    ageValidate(dataNascimento);
-
-    console.log(ageValidate(dataNascimento));
+    if (!ageValidate(dataNascimento)) {
+        campo.setCustomValidity('O usuário não é maior de idade');
+    }
 }
 
 function ageValidate(data) {
